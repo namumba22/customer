@@ -1,0 +1,19 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="Andy" id="0.1-001">
+        <createTable tableName="CUSTOMER">
+            <column name="CUSTOMER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"
+                             primaryKeyName="CUSTOMER_PKEY"/>
+            </column>
+            <column name="NAME" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="CUSTOMER_SEQ" startValue="1"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+   eureka:
+     container_name: memcached
+     image: memcached
+     ports:
+       - "11211:11211"
+
+#     command: ["java", "-jar", "/app/eureka-server-0.5-SNAPSHOT.jar", "&>>", "/app/log/csd-console.log &"]
+
+
+
